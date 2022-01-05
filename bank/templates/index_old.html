@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Банк</title>
+	<!--<link rel="stylesheet"; href="../static/css/style.css">-->
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+	<link rel="SHORTCUT ICON" href="../static/img/dollar.ico" type="image/x-icon">
+	<meta charset="UTF-16">
+</head>
+<body link="#e6c139" vlink="#e8b605" alink="#d49c02">
+	<div class="top">
+		<img id="LIS" src="../static/img/LIS.png" title="Летние Исследовательские смены" alt="Символ смены">
+		<h1>Летние Исследовательские Смены</h1>
+		<h2><a href="/">{{ a }}</a></h2>
+	</div>
+	<div>
+  		<a href="squads/1"><button class="squad-button", id="first"><b>1 отряд</b></button></a>
+  		<a href="squads/2"><button class="squad-button", id ="second"><b>2 отряд</b></button></a>
+  		<a href="squads/3"><button class="squad-button", id="third"><b>3 отряд</b></button></a>
+  		<a href="squads/4"><button class="squad-button", id="fourth"><b>4 отряд</b></button>
+	</div>
+	<style type="text/css">
+		@import "compass/css3";
+
+		.top {
+		  position: fixed;
+		  display: block;
+		  height: 60px;
+		  background-color: darkblue;
+		  border-bottom: 1px solid #444857;
+		  width: 100%;
+		  top: 0;
+		  left: 0;
+		  outline: 1px solid #040194;
+		  z-index: 1;}
+		.top > img {
+			display: inline-block;
+		  	height: 60px;
+		  	top: 0; 
+		  	left: 0;}
+		.top > h1 { 
+			display: block;
+			position: fixed;
+			font-family: sans-serif;
+			left: 30%;
+			top: -2%;
+			color: #e6c139;
+			-webkit-text-stroke: 1px #000;}
+		.top > h2 {
+			display: block;
+			position: fixed;
+			font-family: sans-serif;
+			text-align: right;
+			right: 1%;
+			top: -1.5%;}
+		a {
+			color: #e6c139;
+			-webkit-text-stroke: 1px #000;
+			text-decoration: none;}
+		body {
+		    background-image: url(../static/img/bg.png);
+		    background-size: 100%; 
+		    background-color: #c7b39b;}
+		.squad-button {
+			position: absolute;
+			width: 40%;
+			height: 30%;
+
+		  	border-radius: 4px;
+		  	box-shadow: 0 4px 8px 0 rgba(39, 153, 214, 0.35);
+		  	cursor: pointer;
+		  	opacity: 60%;
+		  	transition: border-radius 0.15s ease-in, box-shadow 0.15s ease-out;
+		  	font-size: 30px;}
+		.squad-button:hover {
+		  	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 5);
+		  	border-radius: 16px;}
+
+		#first {
+			color: rgba(255,255,255, 100);
+			border: 1px solid cyan;
+			background: #040194;
+			left: 7%;
+			top: 20%;}
+		#first:hover {background: darkblue;}
+
+		#second {
+			left: 52%;
+			top: 20%;
+			color: rgba(255,255,255, 100);
+			border: 1px solid lightgreen;
+			background: green;}
+		#second:hover {background: darkgreen;}
+
+		#third {
+			left: 7%;
+			top: 60%;
+			color: rgba(255,255,255, 100);
+			border: 1px solid pink;
+			background: red;}
+		#third:hover {background: darkred;}
+
+		#fourth {
+			left: 52%;
+			top: 60%;
+			color: rgba(255,255,255, 100);
+			border: 1px solid lightyellow;
+			background: #edcd18;}
+		#fourth:hover {background: #e6c139;}
+		}
+</style>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Squad number {{ squad_num }}</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<br>
+	<div id="squad_info">
+		<a href="/main"><button>На главную</button></a>
+		<h1>{{ squad_num }} отряд</h1>
+		<i><h2>{{ squad_name }} - "{{ squad_slogan }}"</h2></i>
+		<h4>Побед на мероприятиях: 
+			{% if admin %}<a href="/change/{{ squad_num }}/-"><button>-</button></a>{% endif %}
+				{{ achivements }} 
+			{% if admin %}<a href="/change/{{ squad_num }}/+"><button>+</button></a>{% endif %}</h4>
+	<br>
+	</div>
+	<div id="squad_img"><img src="../static/img/{{ squad_num }}.png" id='img'><br><br></div>
+	<div>
+	<table class="table table-striped table-bordered table-hover table_sort" id="info">
+		<thead>
+		<tr>
+		    <th scope="col">Фамилия</th>
+		    <th scope="col">Имя</th>
+		    <th scope="col">Должность</th>
+		    <th scope="col">Баланс</th>
+		    {% if admin %}
+		    	<th scope="col">Изменить</th>
+		    {% endif %}
+		</tr>
+		</thead>
+		<tbody>
+		  {% for i in info %}
+		  	<tr>
+		  	{% for j in range(4) %}
+			    <td>{{ i[j] }}</td>
+		    {% endfor %}
+		    	{% if admin %}
+		    	<td><a href="/edit/{{ i[-1] }}"><button class="edit_button">Edit</button></a></td>
+		    	{% endif %}
+		    </tr>
+		  {% endfor %}  
+		</tbody>
+		</table>
+	</div>
+
+	<style>
+		#squad_info {
+			float: left;
+			width: 50%;}
+
+		#squad_img {
+			float: right;
+			width: 50%;
+		}
+
+		#img {
+			float: right;
+			height: 200px;
+		}
+
+		.edit_button {
+			width: 100%;
+			border: none;
+		}
+		#info {
+			border: 1px outset black;
+			border-top: 5px;
+		}
+
+		a {
+            color: #000;
+            text-decoration: none;}
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+
+	    const getSort = ({ target }) => {
+	        const order = (target.dataset.order = -(target.dataset.order || -1));
+	        const index = [...target.parentNode.cells].indexOf(target);
+	        const collator = new Intl.Collator(['en', 'ru'], { numeric: true });
+	        const comparator = (index, order) => (a, b) => order * collator.compare(
+	            a.children[index].innerHTML,
+	            b.children[index].innerHTML
+	        );
+	        
+	        for(const tBody of target.closest('table').tBodies)
+	            tBody.append(...[...tBody.rows].sort(comparator(index, order)));
+
+	        for(const cell of target.parentNode.cells)
+	            cell.classList.toggle('sorted', cell === target);
+	    };
+	    
+	    document.querySelectorAll('.table_sort thead').forEach(tableTH => tableTH.addEventListener('click', () => getSort(event)));
+	    
+		});
+	</script>
+</body>
+</html>

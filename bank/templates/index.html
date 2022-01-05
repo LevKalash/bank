@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Главная</title>
+	<link href="../static/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light" id="navbar" style="background-color: darkblue;">
+		<a class="navbar-brand" href="#" id="navtext_main">
+			<img src="../static/img/LIS.png" width="30" height="35" class="d-inline-block align-top" alt="Лисёнок">
+			Банк Лагеря Талалушкино
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="navbar-collapse justify-content-end" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link navbar-right" href="/" id="navtext">{{ a }}</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container page-content pt-4">
+		<div class="row">
+			<div class="col-md-5 col-sm-12 col-xs-12 mt-5">
+				<a href="squads/1" class="btn btn-first">1 отряд</a>
+			</div>
+			<div class="col-md-2 col-sm-0 col-xs-0"></div>
+			<div class="col-md-5 col-sm-12 col-xs-12 mt-5">
+				<a href="squads/2" class="btn btn-second">2 отряд</a>
+			</div>
+			<div class="col-md-5 col-sm-12 col-xs-12 mt-5">
+				<a href="squads/3" class="btn btn-third">3 отряд</a>
+			</div>
+			<div class="col-md-2 col-sm-0 col-xs-0"></div>
+			<div class="col-md-5 col-sm-12 col-xs-12 mt-5">
+				<a href="squads/4" class="btn btn-fourth">4 отряд</a>
+			</div>
+		</div>
+	</div>
+	<style>
+		#navbar {
+			background-color: darkblue;
+			font-family: sans-serif; 
+		}
+
+		#navtext, #navtext_main {
+			color: #e6c139;
+			-webkit-text-stroke: 0.3px #000;
+		}
+
+		html {
+			min-height: 100%;
+		}
+
+		body {
+			min-height: 100%;
+			background: url("../static/img/bg_blured.jpg") no-repeat;
+			background-size: cover; 
+		}
+
+		#LIS {
+			height: 50px;
+		}
+
+		.btn {
+			height: 10rem;
+			width: 100%;
+			border-radius: .5rem;
+			font-size: 2.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 70%;
+			transition: border-radius 0.15s ease-in, box-shadow 0.15s ease-out;
+		}
+
+		.btn:hover {
+			box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 5);
+			border-radius: 16px;}
+
+		.btn-first {
+			color: rgba(255,255,255, 100);
+			border: 1px solid cyan;
+			background: #040194;
+		}
+
+		.btn-second {
+			color: rgba(255,255,255, 100);
+			border: 1px solid lightgreen;
+			background: green;
+		}
+
+		.btn-third {
+			color: rgba(255,255,255, 100);
+			border: 1px solid pink;
+			background: red;
+		}
+
+		.btn-fourth {
+			color: rgba(255,255,255, 100);
+			border: 1px solid lightyellow;
+			background: #edcd18;
+		}
+		.btn-first:hover {background: darkblue;}
+		.btn-second:hover {background: darkgreen;}
+		.btn-third:hover {background: darkred;}
+		.btn-fourth:hover {background: #e6c139;;}
+		/*.button {
+			height: 150px;
+			border-radius: 5px;
+			box-shadow: 0 4px 8px 0 rgba(39, 153, 214, 0.35);
+			cursor: pointer;
+			opacity: 70%;
+			transition: border-radius 0.15s ease-in, box-shadow 0.15s ease-out;
+			font-size: 30px;
+		}
+		.button:hover {
+			box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 5);
+			border-radius: 16px;}
+
+			#first, #second {
+				top: 160px;
+				margin-top: 10px;
+			}
+
+			#third, #fourth {
+				top: 180px;
+				margin-top: 10px;
+			} */
+
+			#first {
+				color: rgba(255,255,255, 100);
+				border: 1px solid cyan;
+				background: #040194;
+			}
+			#first:hover {background: darkblue;}
+
+			#second {
+				color: rgba(255,255,255, 100);
+				border: 1px solid lightgreen;
+				background: green;}
+				#second:hover {background: darkgreen;}
+
+				#third {
+					color: rgba(255,255,255, 100);
+					border: 1px solid pink;
+					background: red;}
+					#third:hover {background: darkred;}
+
+					#fourth {
+						color: rgba(255,255,255, 100);
+						border: 1px solid lightyellow;
+						background: #edcd18;}
+						#fourth:hover {background: #e6c139;}
+					}
+
+			.page-content {
+				background-image: url('bg.jpg');
+				background-size: 100%;
+				background-color: #000;
+			}
+
+			b {
+				-webkit-text-stroke: 1px #444;
+			}
+	</style>
+</body>
+</html>

@@ -1,0 +1,81 @@
+#navbar {
+	background-color: darkblue;
+	font-family: sans-serif; 
+}
+
+#navtext, #navtext_main {
+	color: #e6c139;
+	-webkit-text-stroke: 0.3px #000;
+}
+
+html {
+	min-height: 100%;
+}
+
+body {
+	min-height: 100%;
+	background: url("../static/img/bg_blured.jpg") no-repeat;
+  	background-size: cover; 
+}
+
+#LIS {
+	height: 50px;
+}
+.button {
+	height: 150px;
+	border-radius: 5px;
+  	box-shadow: 0 4px 8px 0 rgba(39, 153, 214, 0.35);
+  	cursor: pointer;
+  	opacity: 80%;
+  	transition: border-radius 0.15s ease-in, box-shadow 0.15s ease-out;
+	font-size: 30px;
+}
+.button:hover {
+  	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 5);
+  	border-radius: 16px;}
+
+#first, #second {
+	top: 160px;
+	margin-top: 10px;
+}
+
+#third, #fourth {
+	top: 180px;
+	margin-top: 10px;
+}
+
+#first {
+	color: rgba(255,255,255, 100);
+	border: 1px solid cyan;
+	background: #040194;
+}
+#first:hover {background: darkblue;}
+
+#second {
+	color: rgba(255,255,255, 100);
+	border: 1px solid lightgreen;
+	background: green;}
+#second:hover {background: darkgreen;}
+
+#third {
+	color: rgba(255,255,255, 100);
+	border: 1px solid pink;
+	background: red;}
+#third:hover {background: darkred;}
+
+#fourth {
+	color: rgba(255,255,255, 100);
+	border: 1px solid lightyellow;
+	background: #edcd18;}
+#fourth:hover {background: #e6c139;}
+}
+
+.page-content {
+  background-image: url('bg.jpg');
+  background-size: 100%;
+  background-color: #000;
+}
+
+b {
+	-webkit-text-stroke: 1px #444;
+}

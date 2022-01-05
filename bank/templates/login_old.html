@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <title>Авторизация</title>
+</head>
+<body>
+    <div class="top">
+        <img id="LIS" src="../static/img/LIS.png" title="Летние Исследовательские смены" alt="Символ смены">
+        <h1>Летние Исследовательские Смены</h1>
+        <h2><a href="/main">На главную</a></h2>
+    </div>
+    <div class="container col-md-5 col--4 col-xs-5" id="main">
+        <div>
+            <form class="login_form row-md-10 row-sm" method="post">
+                <h2>Введите логин и пароль своей учётной записи</h2>
+                <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Введите логин" name="username">
+                <input type="password" class="form-control" id="password" placeholder="Введите пароль" name="password">
+                <p class="text-danger">{{ error_alert }}</p>
+                <button type="submit" class="btn btn-primary">Войти</button>
+            </form>
+        </div>
+    </div>                     
+    <style>
+        a {
+            color: #e6c139;
+            -webkit-text-stroke: 1px #000;
+            text-decoration: none;}
+        .top {
+            position: fixed;
+            display: block;
+            height: 60px;
+            background-color: darkblue;
+            border-bottom: 1px solid #444857;
+            width: 100%;
+            top: 0;
+            left: 0;
+            outline: 1px solid #040194;
+            z-index: 1;}
+        .top > img {
+            display: inline-block;
+            height: 60px;
+            top: 0; 
+            left: 0;}
+        .top > h1 { 
+            display: block;
+            position: fixed;
+            font-family: sans-serif;
+            left: 30%;
+            top: -2%;
+            color: #e6c139;
+            -webkit-text-stroke: 1px #000;}
+        .top > h2 {
+            display: block;
+            position: fixed;
+            font-family: sans-serif;
+            text-align: right;
+            right: 1%;
+            top: -1.5%;}
+        #main {
+            margin-top: 15%;}
+        body {
+            background-image: url("../static/img/bg.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;}
+        h2 {
+            display: block;
+            position: relative;
+            text-align: center;
+            vertical-align: center;
+            height: 50%;}
+        form.login_form {
+            left: 77%;
+            position: absolute;
+            align-content: center;
+            margin: auto;
+            background-color: #ffcc00;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;}
+        input {
+            display: block;
+            position: relative;
+            text-align: center;
+            margin-top: 2px;
+            width: 100%;}
+        button {
+            display: block;
+            position: relative;
+            margin-top: 3px;
+            width: 100%;
+            height: 30%;}
+    </style>
+</body>
+</html>
